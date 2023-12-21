@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+</head>
+<body>
+<main>
+    <h1 th:text="${title}"></h1>
+    <div>
+        <ul>
+            <li th:each="scientist : ${scientists}">
+                <span th:text="${scientist}"></span>
+            </li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>
