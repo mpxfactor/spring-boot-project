@@ -11,95 +11,13 @@
   </head>
 
   <body class="flex bg-slate-100 h-[100vh] relative">
-    <aside class="row-auto flex-col py-2 px-4 border-r-2 border-grey-400">
-      <a th:href="@{#}" class="mb-4 block">
-        <img
-          class="h-8 w-auto"
-          th:src="@{/svg/application-logo.svg}"
-          alt="Logo"
-        />
-      </a>
-      <nav class="">
-        <ul class="space-y-1">
-          <li>
-            <a
-              th:href="@{#}"
-              class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-2 py-2 text-base font-medium"
-            >
-              <svg th:replace="dashboard"></svg>
-              Dashboard
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-2 py-2 text-base font-medium"
-            >
-              <svg th:replace="team"></svg>
-              Team
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-2 py-2 text-base font-medium"
-            >
-              <svg th:replace="projects"></svg>
-              Projects
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-2 py-2 text-base font-medium"
-            >
-              <svg th:replace="calendar"></svg>
-              Calendar
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-2 py-2 text-base font-medium"
-            >
-              <svg th:replace="document"></svg>
-              Documents
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#"
-              class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-2 py-2 text-base font-medium"
-            >
-              <svg th:replace="reports"></svg>
-              Reports
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-
+    <aside th:replace="fragments/aside"></aside>
     <main class="grow">
       <div class="w-auto bg-white px-4 py-2 flex items-center justify-between">
         <h1 class="text-xl text-gray-900">Punith M</h1>
-        <div class="avatar relative w-8 h-8 rounded-full bg-green-500">
-          <div
-            class="hidden bg-white shadow-md border border-gray-200 absolute top-full right-full text-xs w-32 p-3 rounded-sm text-gray-800"
-          >
-            <ul class="space-y-3">
-              <li><a th:href="@{#}">Your Profile</a></li>
-              <li><a th:href="@{#}">Settings</a></li>
-              <li><a th:href="@{#}">Sign out</a></li>
-            </ul>
-          </div>
-          <img src="" alt="" />
-        </div>
+        <div th:replace="fragments/avatar"></div>
       </div>
+
       <div class="p-4">Main</div>
     </main>
 

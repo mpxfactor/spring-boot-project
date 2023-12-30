@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <aside
+      th:fragment="aside"
+      class="row-auto flex-col py-2 px-4 border-r-2 border-grey-400 max-w-full overflow-scroll"
+    >
+      <a th:href="@{#}" class="mb-4 block">
+        <img
+          class="h-8 w-auto"
+          th:src="@{/svg/application-logo.svg}"
+          alt="Logo"
+        />
+      </a>
+      <nav class="">
+        <ul class="space-y-1">
+          <li
+            th:replace="fragments/menu-item :: menu-item('Dashboard', 'dashboard', 'dashboard')"
+          ></li>
+
+          <li
+            th:replace="fragments/menu-item :: menu-item('Team', 'team', 'team')"
+          ></li>
+
+          <li
+            th:replace="fragments/menu-item :: menu-item('Projects', 'projects', 'projects')"
+          ></li>
+
+          <li
+            th:replace="fragments/menu-item :: menu-item('Calendar', 'calendar', 'calendar')"
+          ></li>
+
+          <li
+            th:replace="fragments/menu-item :: menu-item('Documents', 'documents', 'document')"
+          ></li>
+
+          <li
+            th:replace="fragments/menu-item :: menu-item('Reports', 'reports', 'reports')"
+          ></li>
+        </ul>
+      </nav>
+    </aside>
+  </body>
+</html>

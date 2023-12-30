@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div
+      th:fragment="avatar"
+      class="avatar relative w-8 h-8 rounded-full bg-green-500"
+    >
+      <div
+        class="hidden bg-white shadow-md border w-32 p-3 border-gray-200 absolute top-full right-full text-xs rounded-sm text-gray-800"
+      >
+        <ul class="space-y-3">
+          <li
+            th:replace="fragments/user-menu-item :: menu-item('Your Profile')"
+          ></li>
+          <li
+            th:replace="fragments/user-menu-item :: menu-item('Settings')"
+          ></li>
+          <li
+            th:replace="fragments/user-menu-item :: menu-item('Sign out')"
+          ></li>
+        </ul>
+      </div>
+      <img src="" alt="" />
+    </div>
+  </body>
+</html>

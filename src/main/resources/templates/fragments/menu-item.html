@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thyPmeleaf.org"
+>
+  <body>
+    <li th:fragment="menu-item(title,link,svg)">
+      <a
+        th:href="${link}"
+        class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-2 py-2 text-base font-medium"
+      >
+      <svg th:replace="|${svg}|"></svg>
+      [[${title}]]
+      </a>
+    </li>
+  </body>
+</html>

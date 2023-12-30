@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <li th:fragment="menu-item(title)">
+      <a th:href="@{#}" class="flex p-2 hover:bg-slate-200 rounded-md"
+        >[[${title}]]</a
+      >
+    </li>
+  </body>
+</html>

@@ -6,3 +6,4 @@ avatar.addEventListener("click", () => {
   show ? menu.classList.remove("hidden") : menu.classList.add("hidden");
   show = !show;
 });
+
